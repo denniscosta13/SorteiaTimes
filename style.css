@@ -76,6 +76,11 @@ header {
   gap: 2.4rem;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
 
 
 .add {
