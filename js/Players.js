@@ -115,6 +115,7 @@ export class PlayersView extends Players {
         const isEmpty = this.entries.length <= 0
 
         if(isEmpty) {
+          alert('Insira os jogadores na lista.')
           return
         }
 
