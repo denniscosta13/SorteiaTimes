@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorteia Times - O seu sorteador de times</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <script type="module" src="./js/main.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Sortear meu time!</h1>
+      <div class="add">
+        <label for="player-input" class="sr-only">Digite o nome</label>
+        <input type="text" id="player-input" placeholder="Digite o nome">
+        <button>&plus; Adicionar</button>
+      </div>
+    </header>
+    <main>
+      <h2>Selecione os jogadores:</h2>
+      <form>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Vai jogar?</th>
+              <th>Goleiro?</th>
+              <th>Remover</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+
+        <input type="button" value="Sortear" id="btn-sortear">
+      </form>
+    </main>
+  </div>
+</body>
+</html>
