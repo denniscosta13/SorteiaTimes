@@ -5,7 +5,31 @@ export class Players {
   }
 
 
+  splitTeams(array, teamSize) {
+    let result = [];
 
+  for (let i = 0; i < array.length; i += teamSize) {
+    let chunk = array.slice(i, i + teamSize);
+    result.push(chunk);
+  }
+
+  return result;
+
+
+  }
+
+  shuffleTeams(array) {  
+    for (let i = array.length - 1; i > 0; i--) { 
+      const j = Math.floor(Math.random() * (i + 1)); 
+      [array[i], array[j]] = [array[j], array[i]]; 
+    } 
+    
+    const teams = this.splitTeams(array,5)
+    
+    return teams
+
+
+  }
   
   load() {
     this.entries = JSON.parse(localStorage.getItem('@sorteiaTimes-players:')) || []
@@ -85,6 +109,16 @@ export class PlayersView extends Players {
         if(isOk) {
           this.delete(user)
         }
+      }
+
+      this.root.querySelector('#btn-sortear').onclick = () => {
+        const isEmpty = this.entries.length <= 0
+
+        if(isEmpty) {
+          return
+        }
+
+        this.shuffleTeams(this.entries)
       }
 
       this.tbody.append(row)
