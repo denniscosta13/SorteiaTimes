@@ -9,18 +9,26 @@
   <title>Sorteia Times - O seu sorteador de times</title>
   
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <script type="module" src="./js/main.js" defer></script>
 </head>
 <body>
   <div id="app">
     <header>
-      <h1>Sortear meu time!</h1>
+      <h1>Sorteia Times!</h1>
+      <h4>Adicione os jogadores:</h4>
       <div class="add">
         <label for="player-input" class="sr-only">Digite o nome</label>
         <input type="text" id="player-input" placeholder="Digite o nome">
         <button>&plus; Adicionar</button>
+      </div>
+      <div class="team-size">
+        <label for="teamsize" class="">Escolha a modalidade:</label>
+        <select id="teamsize">
+          <option value="5" selected="selected">Futsal</option>
+          <option value="7">Fut7</option>
+          <option value="11">Campo</option>
+        </select>
       </div>
     </header>
     <main>
@@ -31,7 +39,6 @@
             <tr>
               <th>Nome</th>
               <th>Vai jogar?</th>
-              <th>Goleiro?</th>
               <th>Remover</th>
             </tr>
           </thead>
@@ -41,6 +48,17 @@
 
         <input type="button" value="Sortear" id="btn-sortear">
       </form>
+
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="teams">
+          </div>
+        </div>
+      
+      </div>
     </main>
   </div>
 </body>
