@@ -96,7 +96,7 @@ export class PlayersView extends Players {
 
     this.tbody = this.root.querySelector('table tbody')
     this.teams = this.root.querySelector('.teams')
-    this.teamSize = Number(this.root.querySelector('#teamsize').value)
+    
     
     
     this.onadd()
@@ -112,7 +112,7 @@ export class PlayersView extends Players {
     
     this.root.querySelector('#btn-sortear').onclick = () => {
 
-      
+      let teamSize = Number(this.root.querySelector('#teamsize').value)
       
       const isEmpty = this.entries.length <= 0
       
@@ -122,7 +122,7 @@ export class PlayersView extends Players {
       }
 
       const checkedPlayersArray = this.checkedPlayers()
-      const shuffledArray = this.shuffleTeams(checkedPlayersArray,this.teamSize);
+      const shuffledArray = this.shuffleTeams(checkedPlayersArray,teamSize);
       
       this.updateTeams(shuffledArray)
       
