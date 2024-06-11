@@ -1,0 +1,12 @@
+{
+  "name": "sorteiatimes",
+  "version": "1.0.0",
+  "main": "teste.js",
+  "scripts": {
+    "start": "node js\\main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

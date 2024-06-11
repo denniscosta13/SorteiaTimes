@@ -37,7 +37,7 @@ body * {
   border: none;
 }
 
-button, #btn-sortear {
+button, #btn-sortear, #btn-show {
   background-color: var(--mid-blue);
   border: none;
   color: #fff;
@@ -52,6 +52,11 @@ button, #btn-sortear {
   background-color: var(--dark-blue);
 }
 
+#buttons {
+  display: flex;
+  gap: .8rem;
+}
+
 #btn-sortear {
   background-color: var(--dark-yellow);
   border-radius: .4rem;
@@ -60,6 +65,16 @@ button, #btn-sortear {
 
 #btn-sortear:hover {
   background-color: var(--yellow);
+}
+
+#btn-show {
+  background-color: var(--dark-blue);
+  border-radius: .4rem;
+  width: 33.33%;
+}
+
+#btn-show:hover {
+  background-color: var(--mid-blue);
 }
 
 .remove button {

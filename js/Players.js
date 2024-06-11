@@ -108,10 +108,12 @@ export class PlayersView extends Players {
 
   modalListeners() {
     // // Sortear times
+    
     const modal = this.root.querySelector('.modal')
     
     this.root.querySelector('#btn-sortear').onclick = () => {
-
+      this.removeAllPlayers()
+      
       let teamSize = Number(this.root.querySelector('#teamsize').value)
       
       const isEmpty = this.entries.length <= 0
@@ -129,14 +131,19 @@ export class PlayersView extends Players {
       modal.style.display = "block"
     }
 
+    this.root.querySelector('#btn-show').onclick = () => {
+      //this.removeAllPlayers()
+      modal.style.display = "block"
+    }
+
     this.root.querySelector('.close').onclick = () => {
-      this.removeAllPlayers()
+      //this.removeAllPlayers()
       modal.style.display = "none"
     }
 
     window.onclick = event => {
       if(event.target == modal) {
-        this.removeAllPlayers()
+        //this.removeAllPlayers()
         modal.style.display = "none" 
       }
     }
